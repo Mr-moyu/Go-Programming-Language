@@ -1,0 +1,15 @@
+package main
+
+import (
+	"os"
+	"fmt"
+)
+
+func main() {
+	var s, sep string
+	for _, args := range os.Args[1:] {
+		s += sep + args
+		sep = " "
+	}
+	fmt.Println(s)
+}
